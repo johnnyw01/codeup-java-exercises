@@ -1,32 +1,28 @@
 public class ControlFlowExercises {
     public static void main (String[] args){
 
-        //#1
-        int count = 0;
+        // While-loop as a For-loop
+        for(int i = 5; i <= 15; i++){
+            System.out.print(i + " ");
+        }
 
-        do {
+        //Do-while-loop as a For-loop
+        //#1
+        for(int count = 0; count <= 100; count +=2){
             System.out.println(count);
-            count += 2;
-        } while (count <= 100);
+        }
+
 
         //#2
-        int countMinus5 = 100;
-
-        do {
+        for(int countMinus5 = 100; countMinus5 >= -10; countMinus5 -= 5 ){
             System.out.println(countMinus5);
-            countMinus5 -= 5;
-        } while (countMinus5 >= -10);
+        }
+
 
         //#3
-        long num = 2;
-        System.out.println(num);
-        do {
-            long square = num * num;
-            if (square == 2 || square == 4 || square == 16 || square == 256 || square == 65536) {
-                System.out.println(square);
-            }
-            num++;
-        } while (num * num < 1000000);
+        for(long i = 2; i < 1000000; i = i * i){
+            System.out.println(i);
+        }
 
     }
 }
