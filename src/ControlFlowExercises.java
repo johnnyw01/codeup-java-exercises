@@ -3,18 +3,29 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        //#3  Display a table of powers:
+        //#4  Convert given number grades into letter grades:
 
         Scanner scanner = new Scanner(System.in);
         String askAgain;
         do {
-            System.out.println("Please enter a number to see a table showing the powers of that number?");
+            System.out.println("Please enter a number between 0-100 to see a a letter grade: ");
             int userNumber = scanner.nextInt();
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            for (int i = 1; i <= userNumber; i++) {
-                System.out.println(String.format("%-6d | %-7d | %-6d", i, i * i, i * i * i));
+
+            if(userNumber >= 88 && userNumber <= 100){
+                        System.out.println("Your grade is an A");
+            }
+            else if (userNumber >= 80  && userNumber <= 87) {
+                System.out.println("Your grade is an B");
+            }
+            else if (userNumber >= 67 && userNumber <= 79) {
+                System.out.println("Your grade is an C");
+            }
+            else if (userNumber >= 60 && userNumber <= 66) {
+                System.out.println("Your grade is an D");
+            }else if (userNumber >= 0 && userNumber <= 59) {
+                System.out.println("Your grade is an F");
+            }else if (userNumber < 0 || userNumber > 100) {
+                System.out.println("Please enter a number between 0-100");
             }
             System.out.print("Do you want to continue? (y/n): ");
 //            scanner.nextLine();
