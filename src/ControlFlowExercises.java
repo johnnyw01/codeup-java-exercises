@@ -30,7 +30,7 @@ public class ControlFlowExercises {
             System.out.print("Do you want to continue? (y/n): ");
 //            scanner.nextLine();
             askAgain = scanner.next();
-        } while (askAgain.equals("y"));
+        } while (askAgain.equalsIgnoreCase("y"));
         System.out.println("Goodbye!");
     }
 }
